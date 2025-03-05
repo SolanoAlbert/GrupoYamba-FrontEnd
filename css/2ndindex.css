@@ -1,0 +1,230 @@
+:root {
+    --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+        "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+        "Source Han Sans CN", sans-serif;
+}
+
+/* Restablecer márgenes y padding predeterminados */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Roboto', sans-serif;
+}
+
+html, body {
+    
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-size: 100% 100%;
+    overflow: hidden;
+   
+}
+
+.login-button{
+    background-color: #FF8C42;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+    
+}
+.login-button:hover{
+    background-color:#85E41A;
+}
+
+.navbar{
+    color:white;
+    height:80px ;
+    margin: 20px;
+    border-radius: 16px;
+    padding: 0.5rem;
+}
+
+
+.logoYamba{
+    width: 100px;
+    height: 60px;
+    
+}
+
+.navbar-toggler{
+    border: none;
+    font-size: 1.25 rem;
+}
+.navbar-toggler:focus, .btn-close:focus{
+   box-shadow: none;
+   outline: none;
+}
+
+.nav-link{
+    color: white ;
+    font-weight: 500;
+    font-size: 20px;
+}
+.dropdown-menu{
+    color: #666777;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.nav-link:hover,.nav-link.active{
+    color: #cccccc !important; /* Opcional: Cambia el color al pasar el mouse o cuando está activo */
+}
+
+@media (min-width: 991px){
+    .nav-link {
+        position: relative;
+    }
+
+    .nav-link::before{
+        content:"";
+        position: absolute;
+        bottom: -2px;
+        left:50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: #FF8C42;
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+
+    .nav-link:hover::before{
+        visibility: visible;
+        width: 100%;
+    }
+}
+
+.hero-section {
+    background: url(/img/electric-guitar-with-neon-light.jpg) no-repeat center;
+    background-size: cover;
+    min-height: 70vh;
+    width: 100%;
+    position: relative;
+    padding-top: 120px;
+}
+.hero-section::before{
+    background-color: rgba(0,0,0,0.6);
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+
+
+.container-fluid-radio {
+    width: 95%;
+    max-width: 1200px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.container-emisoras{
+    display: flex;
+    flex-wrap: wrap;
+   justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    gap: 20px;
+}
+
+.container-emisoras a {
+    margin: 10px; /* Añade margen alrededor de cada enlace */
+    flex: 0 0 auto; /* Evita que los elementos se estiren */
+}
+
+.container-emisoras .logoYamba {
+    /* Mantén las dimensiones existentes de las imágenes */
+    width: 100px;
+    height: 60px;
+    transition: transform 0.3s ease; /* Opcional: añade una transición suave al hover */
+}
+
+/* Opcional: añade un efecto hover */
+.container-emisoras .logoYamba:hover {
+    transform: scale(1.1);
+}
+
+.container-fluid-info {
+    width: 80%; /* Reduce el ancho */
+    max-width: 800px; /* Reduce el ancho máximo */
+    border-radius: 16px;
+    margin-top: 5px;
+    margin-bottom: 40px; /* Reduce el margen inferior */
+    padding: 20px; /* Reduce el padding */
+    color: white;
+}
+
+@media (min-width: 576px) {
+    .container-fluid-radio,
+    .container-fluid-info {
+        width: 80%; /* Ajusta el ancho para pantallas pequeñas */
+        max-width: 400px; /* Ancho máximo para pantallas pequeñas */
+    }
+}
+
+@media (min-width: 768px) {
+    .container-fluid-radio,
+    .container-fluid-info {
+        width: 70%; /* Ajusta el ancho para pantallas medianas */
+        max-width: 500px; /* Ancho máximo para pantallas medianas */
+    }
+}
+
+@media (min-width: 992px) {
+    .container-fluid-radio,
+    .container-fluid-info {
+        width: 60%; /* Ajusta el ancho para pantallas grandes */
+        max-width: 600px; /* Ancho máximo para pantallas grandes */
+    }
+}
+
+.footer-custom {
+    position: relative; /* Fija el footer en la parte inferior */
+    width: 100%;
+    font-size: 0.8rem;
+    min-height: 40px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+    z-index: 2; /* Asegura que esté por encima de otros elementos */
+    margin-top: 10px;
+}
+
+.footer-custom .nav-link {
+    padding-top: 0.25rem !important;
+    padding-bottom: 0.25rem !important;
+    font-size: 1rem;
+}
+
+.footer-custom .small {
+    font-size: 1rem !important;
+}
+
+.offcanvas {
+    background-color: #808080; /* Cambia el color de fondo del offcanvas a gris */
+    color: white; /* Cambia el color del texto dentro del offcanvas a blanco */
+}
+    
+
