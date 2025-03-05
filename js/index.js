@@ -65,5 +65,5 @@ function radioYamba() {
 }
 
 function test1() {
-    alert("{Pagina en construcción}");
+    alert("Pagina en construcción");
 }
