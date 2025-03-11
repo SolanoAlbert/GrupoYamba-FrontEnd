@@ -10,11 +10,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 html, body {
-    
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -26,15 +25,14 @@ html, body {
     overflow-x: hidden;
     overflow-y: auto;
     margin-bottom: 0 !important;
-   
 }
 
-body{
+body {
     display: flex;
     flex-direction: column;
 }
 
-.login-button{
+.login-button {
     background-color: #FF8C42;
     color: white;
     font-size: 20px;
@@ -43,59 +41,59 @@ body{
     border-radius: 50px;
     text-decoration: none;
     transition: 0.3s background-color;
-    
-}
-.login-button:hover{
-    background-color:#85E41A;
 }
 
-.navbar{
-    color:white;
-    height:80px ;
+.login-button:hover {
+    background-color: #85E41A;
+}
+
+.navbar {
+    color: white;
+    height: 80px;
     margin: 20px;
     border-radius: 16px;
     padding: 0.5rem;
 }
 
-
-.logoYamba{
+.logoYamba {
     width: 100px;
     height: 60px;
-    
 }
 
-.navbar-toggler{
+.navbar-toggler {
     border: none;
-    font-size: 1.25 rem;
-}
-.navbar-toggler:focus, .btn-close:focus{
-   box-shadow: none;
-   outline: none;
+    font-size: 1.25rem;
 }
 
-.nav-link{
-    color: white ;
+.navbar-toggler:focus, .btn-close:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.nav-link {
+    color: white;
     font-weight: 500;
     font-size: 20px;
 }
+
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 140, 66, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
-.nav-link:hover,.nav-link.active{
+.nav-link:hover, .nav-link.active {
     color: #cccccc !important; /* Opcional: Cambia el color al pasar el mouse o cuando está activo */
 }
 
-@media (min-width: 991px){
+@media (min-width: 991px) {
     .nav-link {
         position: relative;
     }
 
-    .nav-link::before{
-        content:"";
+    .nav-link::before {
+        content: "";
         position: absolute;
         bottom: -2px;
-        left:50%;
+        left: 50%;
         transform: translateX(-50%);
         width: 0;
         height: 2px;
@@ -104,7 +102,7 @@ body{
         transition: 0.3s ease-in-out;
     }
 
-    .nav-link:hover::before{
+    .nav-link:hover::before {
         visibility: visible;
         width: 100%;
     }
@@ -112,15 +110,16 @@ body{
 
 .hero-section {
     flex: 1;
-    background: url(/img/electric-guitar-with-neon-light.webp) no-repeat center;
+    background: url(https://res.cloudinary.com/dlqhm6w9q/image/upload/v1741663858/electric-guitar-with-neon-light_akz1qb.webp) no-repeat center;
     background-size: cover;
     min-height: 70vh;
     width: 100%;
     position: relative;
     padding-top: 120px;
 }
-.hero-section::before{
-    background-color: rgba(0,0,0,0.6);
+
+.hero-section::before {
+    background-color: rgba(0, 0, 0, 0.6);
     content: "";
     position: absolute;
     top: 0;
@@ -128,6 +127,7 @@ body{
     right: 0;
     bottom: 0;
 }
+
 .hero-content {
     display: flex;
     flex-direction: column;
@@ -137,8 +137,6 @@ body{
     z-index: 2;
 }
 
-
-
 .container-fluid-radio {
     width: 95%;
     max-width: 1200px;
@@ -147,11 +145,10 @@ body{
     margin-left: -10px;
 }
 
-
-.container-emisoras{
+.container-emisoras {
     display: flex;
     flex-wrap: wrap;
-   justify-content: space-between;
+    justify-content: space-between;
     align-items: center;
     padding-left: 10px;
     padding-right: 10px;
@@ -216,7 +213,7 @@ body{
     width: 100%;
     padding: 15px 20px;
     background-color: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
     flex-wrap: wrap;
 }
 
@@ -225,6 +222,7 @@ body{
     padding-bottom: 0.25rem !important;
     font-size: 1rem;
 }
+
 .footer-custom ul { /* Target the <ul> containing the nav items */
     list-style: none; /* Remove bullet points */
     padding: 0;
@@ -234,17 +232,17 @@ body{
     align-items: center;
 }
 
-
-
 .footer-custom .small {
     font-size: 1rem !important;
 }
+
 /* En móviles se acomoda en columna */
 @media (max-width: 576px) {
     .footer-custom {
         flex-direction: column;
         text-align: center;
     }
+
     .footer-custom ul {
         flex-direction: column; /* Stack the list items vertically */
         align-items: center; /* Center the items horizontally */
@@ -253,7 +251,6 @@ body{
     .footer-custom li {
         margin: 0.5rem 0; /* Add vertical spacing between list items */
     }
-    
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -283,4 +280,3 @@ body{
     background-color: #07473d; /* Cambia el color de fondo del offcanvas a gris */
     color: white; /* Cambia el color del texto dentro del offcanvas a blanco */
 }
-    
