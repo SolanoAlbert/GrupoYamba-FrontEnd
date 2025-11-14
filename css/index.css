@@ -50,18 +50,21 @@ body {
 .navbar {
     color: white;
     height: 80px;
-    margin: 20px;
     border-radius: 16px;
     padding: 0.5rem;
+    max-width: calc(100% - 40px);
+    left: 20px;
+    right: 20px;
+    z-index: 1000;
 }
 
 .logoYamba {
     width: 100px;
     height: 60px;
 }
-.logoYambaSarat{
-    width: 120px;
-    height: 80px;
+.logoYambaRadios{
+    width: 160px;
+    height: 90px;
 }
 
 .navbar-toggler {
@@ -119,7 +122,7 @@ body {
     min-height: 70vh;
     width: 100%;
     position: relative;
-    padding-top: 120px;
+    padding-top: 140px;
 }
 
 .hero-section::before {
@@ -157,6 +160,12 @@ body {
     padding-left: 10px;
     padding-right: 10px;
     gap: 10px;
+}
+
+.cstrEmbed {
+    max-width: 300px;
+    transform: scale(0.8);
+    transform-origin: left center;
 }
 
 .container-emisoras a {
